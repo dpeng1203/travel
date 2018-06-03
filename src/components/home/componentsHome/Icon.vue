@@ -2,7 +2,7 @@
     <div class="icons">
         <div class="icon" v-for="item in iconList" :key = "item.id" >
             <div class="icon-img">
-                <img class="img" :src='item.imgUrl' alt="">
+                <img class="img" :src="item.imgUrl" alt="">
             </div>
             <p class="p">{{item.desc}}</p>
         </div>
@@ -57,6 +57,7 @@ export default {
         overflow : hidden
         height: 0
         padding-bottom : 50%
+        margin-top : .1 rem
         .icon
             position : relative
             float : left 
