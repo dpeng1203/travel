@@ -22,21 +22,29 @@
                     <div class="title">当前城市</div>
                     <div class="button-list">
                         <div class="button-wrapper">
-                            <div class="button">北京</div>
+                            <div class="button">{{this.$store.state.city}}</div>
                         </div>
                     </div>
                 </div>
                 <div class="area">
                     <div class="title">热门城市</div>
                     <div class="button-list" >
-                        <div class="button-wrapper" v-for="hot in hotcities" :key="hot.id">
+                        <div 
+                        class="button-wrapper" 
+                        v-for="hot in hotcities" 
+                        :key="hot.id"
+                        @click="handleCityClick(hot.name)">
                             <div class="button">{{hot.name}}</div>
                         </div>
                     </div>
                 </div>
                 <mt-index-section v-for="(item, key) of cities" :key="key" :index="key" >
                     <div class="item-list">
-                        <div class="item" v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</div>
+                        <div class="item" 
+                        v-for="innerItem of item" 
+                        :key="innerItem.id"
+                        @click="handleCityClick(innerItem.name)">
+                        {{innerItem.name}}</div>
                     </div>
                 </mt-index-section>
             </mt-index-list>
@@ -54,6 +62,13 @@ export default {
     props: {
         cities: Object,
         hotcities: Array
+    },
+    methods: {
+        handleCityClick (e) {
+            //this.$store.dispatch('changeCity',e)
+            this.$store.commit('changeCity',e)
+            this.$router.push('/')
+        }
     }
 }
 </script>

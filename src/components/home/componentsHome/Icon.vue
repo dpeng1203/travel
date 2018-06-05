@@ -37,7 +37,7 @@ export default {
                 left : 0
                 right : 0
                 bottom : .44rem
-                padding : .1 rem
+                padding : .2 rem
 
                 .img
                     height : 100% 

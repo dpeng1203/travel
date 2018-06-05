@@ -8,7 +8,7 @@
        <input class="input" type="text" placeholder="请输入城市/景点游玩主题">
        <router-link to='/city'>
             <div class="city">
-                <span>城市</span>
+                <span>{{this.$store.state.city}}</span>
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-xiala"></use>
                     </svg>
@@ -42,7 +42,8 @@ export default {
             flex: 1
             border-radius .1 rem
         .city
-            width: 1.24 rem
+            min-width: 1.04 rem
+            padding: 0 .1rem
             float: right 
             text-align: center
             color: #fff

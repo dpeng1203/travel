@@ -5,7 +5,10 @@
         </div>
         <div class="search-content" v-show="keyword">
             <ul>
-                <li class="search-item" v-for="(item,index) in city" :key="index">{{item.name}}</li>
+                <li class="search-item" 
+                v-for="(item,index) in city" 
+                :key="index"
+                @click="handleCityClick(item.name)">{{item.name}}</li>
                 <li class="search-item" v-show="hasNoCity">没有匹配到数据</li>
             </ul>
         </div>
@@ -24,6 +27,13 @@ export default {
             keyword: '',
             city: [],
             timer: null
+        }
+    },
+    methods: {
+        handleCityClick (e) {
+            //this.$store.dispatch('changeCity',e)
+             this.$store.commit('changeCity',e)
+             this.$router.push('/')
         }
     },
     computed: {
