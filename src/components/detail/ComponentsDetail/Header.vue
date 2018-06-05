@@ -12,12 +12,8 @@
                         <use xlink:href="#icon-fanhui"></use>
                     </svg>
                 </div>
-            </router-link>
-            
-            城市选择   
-            
+            </router-link>城市选择   
         </div>
-        <div class="content"></div>
     </div>
 </template>
 
@@ -72,6 +68,7 @@ export default {
             margin-top : .1rem
             margin-left : .05rem
     .header
+        z-index : 3
         height: .86 rem
         line-height: .86 rem
         font-size : .32 rem
@@ -88,7 +85,6 @@ export default {
             left : 0
             color : #fff
             padding-left : .3rem
-    .content
-        height : 50rem
+    
             
 </style>

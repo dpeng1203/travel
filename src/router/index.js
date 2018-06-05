@@ -24,5 +24,8 @@ export default new Router({
       component: Ditail
     }
 
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
