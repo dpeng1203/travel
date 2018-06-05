@@ -7,12 +7,15 @@ import fastClick from 'fastclick'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import { Swipe, SwipeItem } from 'mint-ui'
+import { IndexList, IndexSection } from 'mint-ui'
 import 'mint-ui/lib/style.css'  
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Swipe.name, Swipe)
+Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(IndexList.name, IndexList)
+Vue.component(IndexSection.name, IndexSection)
 
 /* eslint-disable no-new */
 new Vue({

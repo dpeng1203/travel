@@ -6,12 +6,14 @@
             </svg>
        </div>
        <input class="input" type="text" placeholder="请输入城市/景点游玩主题">
-       <div class="city">
-           <span>城市</span>
-           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-xiala"></use>
-            </svg>
-       </div>
+       <router-link to='/city'>
+            <div class="city">
+                <span>城市</span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xiala"></use>
+                    </svg>
+            </div>
+       </router-link>
     </div> 
 </template>
 
@@ -24,17 +26,18 @@ export default {
 <style lang="stylus" scoped>
     .header
         display: flex
-        height: .64 rem
-        line-height: .64 rem
+        height: .86 rem
+        line-height: .86 rem
         background: #00bcd4
         .back
             width: .64 rem
             float: left
             text-align: center
+            color: #fff
         .input
-            margin-top: .06 rem
+            margin-top: .15 rem
             margin-left: .2 rem
-            margin-bottom: .06 rem 
+            margin-bottom: .15rem 
             padding-left: .2 rem
             flex: 1
             border-radius .1 rem
@@ -42,5 +45,5 @@ export default {
             width: 1.24 rem
             float: right 
             text-align: center
-
+            color: #fff
 </style>
