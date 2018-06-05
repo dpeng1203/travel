@@ -54,6 +54,9 @@ export default {
     },
     mounted () {
         this.getHomeInfo()
+    },
+    activated () {
+        this.getHomeInfo()
     }
 }
 </script>
