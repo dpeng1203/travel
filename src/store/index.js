@@ -7,11 +7,13 @@ try{
     if (localStorage.city) {
         defaultCity = localStorage.city
     }
-} catch(e) {}
+} catch(e) {
+    console.error(e)
+}
 
 export default new Vuex.Store({
     state: {
-        city: defaultCity 
+        city: defaultCity
     },
     // actions: {
     //     changeCity (ctx,e) {
