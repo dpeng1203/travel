@@ -34,7 +34,7 @@ export default {
     },
     methods: {
         getHomeInfo () {
-            axios.get('/static/mock/detail.json',{
+            axios.get('/travel/dist/static/mock/detail.json',{
                 params:{
                     id: this.$route.params.id
                 }
